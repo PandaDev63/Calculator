@@ -12,7 +12,7 @@ function calculate(){
     if(display.value == "69"){
         window.alert("U R SUS");
     }
-    if(display.value == "infinity69"){
+    if(display.value == "Infinity69"){
         window.alert("U TRULY R VERY SUS")
     }
     try{
