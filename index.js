@@ -10,7 +10,7 @@ function clearDisplay(){
 
 function calculate(){
     if(display.value == "Infinity69"){
-        window.alert("'SUS, U R.' Yoda said mysteriously...");
+        window.alert("'SUS, U R,' Yoda said mysteriously...");
     }
     try{
         display.value = eval(display.value);
