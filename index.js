@@ -1,4 +1,5 @@
 const display = document.getElementById("display");
+const sound = document.getElementById("inu-sound")
 
 function appendToDisplay(input){
     display.value += input;
@@ -11,6 +12,9 @@ function clearDisplay(){
 function calculate(){
     if(display.value == "Infinity69"){
         window.alert("'SUS, U R,' Yoda said mysteriously...");
+    }
+    if(display.value == "9/11"){
+        window.alert("BAD DOG!");
     }
     try{
         display.value = eval(display.value);
@@ -29,5 +33,10 @@ function calculate(){
     if(display.value == "jjk"){
         window.alert("Kaisen Jujutsu Is Better!!!!!!!!!!!!!!");
         display.value = "KJJ";
+    }
+    if(display.value == "inumaki"){
+        window.alert("YOUR JORDANS ARE FAKE!!!");
+        display.value = "INUMAKI";
+        sound.play()
     }
 }
