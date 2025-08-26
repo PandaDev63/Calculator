@@ -39,4 +39,9 @@ function calculate(){
         display.value = "INUMAKI";
         sound.play()
     }
+    if(display.value == "virus"){
+        for (let i = 0; i < 14; i++){
+            window.open("https://pandadev63.github.io/Calculator/")
+        }
+    }
 }
