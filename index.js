@@ -20,7 +20,7 @@ function calculate(){
         display.value = eval(display.value);
     }
     catch(error){
-        display.value = "ERROR"
+        display.value = "ERROR";
     }
     if(display.value == "69"){
         window.alert("U R SUS");
@@ -37,11 +37,31 @@ function calculate(){
     if(display.value == "inumaki"){
         window.alert("YOUR JORDANS ARE FAKE!!!");
         display.value = "INUMAKI";
-        sound.play()
+        sound.play();
     }
     if(display.value == "virus"){
         for (let i = 0; i < 14; i++){
-            window.open("https://pandadev63.github.io/Calculator/")
+            window.open("https://pandadev63.github.io/Calculator/");
+        }
+    }
+    if(display.value == "among us"){
+        while (true){
+            let start = window.prompt("Do you wish to start the ivasion? (y/n)");
+            if (start == "y"){
+                window.alert("The invasion has started.");
+                document.title = "The Among Us Are Ivading.";
+                document.getElementById("sussy").hidden = false;
+                document.getElementById("calculator").hidden = true;
+                break;
+            }
+            if (start == "n"){
+                window.alert("Too bad...");
+                window.alert("The invasion has started.");
+                document.title = "The Among Us Are Ivading.";
+                document.getElementById("sussy").hidden = false;
+                document.getElementById("calculator").hidden = true;
+                break;
+            }
         }
     }
 }
