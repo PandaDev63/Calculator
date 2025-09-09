@@ -37,6 +37,19 @@ body{
     width: 100px;
 }
 
+#goood{
+    color: white;
+    font-size: 7em;  
+    margin: auto;
+    text-align: center;
+}
+
+#sans{
+    margin: auto;
+    size: 3em;
+    position: relative;
+}
+
 button{
     width: 100px;
     height: 100px;

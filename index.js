@@ -1,5 +1,7 @@
 const display = document.getElementById("display");
+const goood = document.getElementById("goood")
 const sound = document.getElementById("inu-sound")
+const sound1 = document.getElementById("sans-sound")
 
 function appendToDisplay(input){
     display.value += input;
@@ -60,6 +62,36 @@ function calculate(){
                 document.title = "The Among Us Are Ivading.";
                 document.getElementById("sussy").hidden = false;
                 document.getElementById("calculator").hidden = true;
+                break;
+            }
+        }
+    }
+        if(display.value == "sans"){
+        while (true){
+            let start = window.prompt("Do you wish to start the ivasion? (y/n)");
+            if (start == "y"){
+                window.alert("The invasion has started.");
+                document.title = "Sans Is Ivading.";
+                document.getElementById("calculator").hidden = true;
+                sound1.play();
+                sound1.loop = true;
+                document.getElementById("sans").hidden = false;
+                document.getElementById("sans1").hidden = false;
+                document.getElementById("sans2").hidden = false;
+                goood.hidden = false;
+                break;
+            }
+            if (start == "n"){
+                window.alert("Too bad...");
+                window.alert("The invasion has started.");
+                document.title = "Sans Is Ivading.";
+                document.getElementById("calculator").hidden = true;
+                sound1.play();
+                sound1.loop = true;
+                document.getElementById("sans").hidden = false;
+                document.getElementById("sans1").hidden = false;
+                document.getElementById("sans2").hidden = false;
+                goood.hidden = false;
                 break;
             }
         }
