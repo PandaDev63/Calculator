@@ -3,6 +3,12 @@ const goood = document.getElementById("goood")
 const sound = document.getElementById("inu-sound")
 const sound1 = document.getElementById("sans-sound")
 
+let secret_event = Math.random()
+
+if(secret_event > 0.8){
+    window.alert(`Ligma...`)
+}
+
 function appendToDisplay(input){
     display.value += input;
 }
@@ -14,9 +20,6 @@ function clearDisplay(){
 function calculate(){
     if(display.value == "Infinity69"){
         window.alert("'SUS, U R,' Yoda said mysteriously...");
-    }
-    if(display.value == "9/11"){
-        window.alert("BAD DOG!");
     }
     try{
         display.value = eval(display.value);
@@ -48,10 +51,10 @@ function calculate(){
     }
     if(display.value == "among us"){
         while (true){
-            let start = window.prompt("Do you wish to start the ivasion? (y/n)");
+            let start = window.prompt("Do you wish to start the invasion? (y/n)");
             if (start == "y"){
                 window.alert("The invasion has started.");
-                document.title = "The Among Us Are Ivading.";
+                document.title = "The Among Us Are Invading.";
                 document.getElementById("sussy").hidden = false;
                 document.getElementById("calculator").hidden = true;
                 break;
@@ -59,7 +62,7 @@ function calculate(){
             if (start == "n"){
                 window.alert("Too bad...");
                 window.alert("The invasion has started.");
-                document.title = "The Among Us Are Ivading.";
+                document.title = "The Among Us Are Invading.";
                 document.getElementById("sussy").hidden = false;
                 document.getElementById("calculator").hidden = true;
                 break;
@@ -68,10 +71,10 @@ function calculate(){
     }
         if(display.value == "sans"){
         while (true){
-            let start = window.prompt("Do you wish to start the ivasion? (y/n)");
+            let start = window.prompt("Do you wish to start the invasion? (y/n)");
             if (start == "y"){
                 window.alert("The invasion has started.");
-                document.title = "Sans Is Ivading.";
+                document.title = "Sans Is Invading.";
                 document.getElementById("calculator").hidden = true;
                 sound1.play();
                 sound1.loop = true;
@@ -84,7 +87,7 @@ function calculate(){
             if (start == "n"){
                 window.alert("Too bad...");
                 window.alert("The invasion has started.");
-                document.title = "Sans Is Ivading.";
+                document.title = "Sans Is Invading.";
                 document.getElementById("calculator").hidden = true;
                 sound1.play();
                 sound1.loop = true;
