@@ -50,6 +50,18 @@ body{
     position: relative;
 }
 
+#event-header{
+    padding: 25px;
+    background-color: hsl(0, 0%, 20%);
+    border: none;
+    border-radius: 15px;
+    font-family: arial, sans-serif;
+    text-align: left;
+    color: white;
+    align-self:baseline;
+    position: absolute;
+}
+
 button{
     width: 100px;
     height: 100px;

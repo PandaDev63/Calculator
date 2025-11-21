@@ -1,12 +1,76 @@
 const display = document.getElementById("display");
-const goood = document.getElementById("goood")
-const sound = document.getElementById("inu-sound")
-const sound1 = document.getElementById("sans-sound")
+const calculator = document.getElementById("calculator");
+const goood = document.getElementById("goood");
+const sound = document.getElementById("inu-sound");
+const sound1 = document.getElementById("sans-sound");
+const event_header = document.getElementById("event-header");
 
-let secret_event = Math.random()
+let secret_event = Math.random();
+let random_event_id = Math.random();
+let event_seconds = 60;
+let current_event = `calc`;
 
-if(secret_event > 0.8){
-    window.alert(`Ligma...`)
+setInterval(updateEventTimer, 1000);
+
+function updateEventTimer(){
+    event_header.innerHTML = `Random Event In ${event_seconds} Seconds`
+    event_seconds--;
+    if(event_seconds < 0){
+        event_seconds = 60
+        if(random_event_id < 0.6){
+            mogus();
+            random_event_id = Math.random();
+        }
+        if(random_event_id > 0.6 && random_event_id < 0.9){
+            sans();
+            random_event_id = Math.random();
+        }
+        if(random_event_id > 0.9){
+            calc();
+            random_event_id = Math.random();
+        }
+    }
+}
+
+function calc(){
+    current_event = `calc`;
+    document.title = "Calculator";
+    sound1.loop = false;
+    sound1.pause();
+    document.getElementById("sans").hidden = true;
+    document.getElementById("sans1").hidden = true;
+    document.getElementById("sans2").hidden = true;
+    document.getElementById("sussy").hidden = true;
+    goood.hidden = true;
+    calculator.hidden = false;
+}
+function sans(){
+    current_event = `sans`;
+    document.getElementById("sussy").hidden = true;
+    document.title = "Sans Is Invading.";
+    sound1.play();
+    sound1.loop = true;
+    document.getElementById("sans").hidden = false;
+    document.getElementById("sans1").hidden = false;
+    document.getElementById("sans2").hidden = false;
+    goood.hidden = false;
+    calculator.hidden = true;
+}
+function mogus(){
+    current_event = `mogus`;
+    document.title = "The Among Us Are Invading.";
+    sound1.loop = false;
+    sound1.pause();
+    document.getElementById("sans").hidden = true;
+    document.getElementById("sans1").hidden = true;
+    document.getElementById("sans2").hidden = true;
+    document.getElementById("sussy").hidden = false;
+    goood.hidden = true;
+    calculator.hidden = true;
+}
+
+if(secret_event > 0.9){
+    window.alert(`Ligma...`);
 }
 
 function appendToDisplay(input){
@@ -54,17 +118,13 @@ function calculate(){
             let start = window.prompt("Do you wish to start the invasion? (y/n)");
             if (start == "y"){
                 window.alert("The invasion has started.");
-                document.title = "The Among Us Are Invading.";
-                document.getElementById("sussy").hidden = false;
-                document.getElementById("calculator").hidden = true;
+                mogus()
                 break;
             }
             if (start == "n"){
                 window.alert("Too bad...");
                 window.alert("The invasion has started.");
-                document.title = "The Among Us Are Invading.";
-                document.getElementById("sussy").hidden = false;
-                document.getElementById("calculator").hidden = true;
+                mogus()
                 break;
             }
         }
@@ -74,27 +134,13 @@ function calculate(){
             let start = window.prompt("Do you wish to start the invasion? (y/n)");
             if (start == "y"){
                 window.alert("The invasion has started.");
-                document.title = "Sans Is Invading.";
-                document.getElementById("calculator").hidden = true;
-                sound1.play();
-                sound1.loop = true;
-                document.getElementById("sans").hidden = false;
-                document.getElementById("sans1").hidden = false;
-                document.getElementById("sans2").hidden = false;
-                goood.hidden = false;
+                sans()
                 break;
             }
             if (start == "n"){
                 window.alert("Too bad...");
                 window.alert("The invasion has started.");
-                document.title = "Sans Is Invading.";
-                document.getElementById("calculator").hidden = true;
-                sound1.play();
-                sound1.loop = true;
-                document.getElementById("sans").hidden = false;
-                document.getElementById("sans1").hidden = false;
-                document.getElementById("sans2").hidden = false;
-                goood.hidden = false;
+                sans()
                 break;
             }
         }
