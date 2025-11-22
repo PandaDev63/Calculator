@@ -16,7 +16,6 @@ body{
     max-width: 550px;
     overflow: hidden;
     box-shadow: 0 4px 30px hsl(0, 0%, 100%);
-    position: relative;
 }
 
 #display{
