@@ -3,12 +3,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 100vh;
     background-color: hsl(351, 100%, 84%);
     padding-top: 50px;
 }
 
 #calculator{
+    margin-top: 100px;
     font-family: arial, sans-serif;
     background-color: hsl(0, 0%, 20%);
     border-radius: 25px;
