@@ -42,13 +42,11 @@ body{
     font-size: 7em;  
     margin: auto;
     text-align: center;
+    align-self:baseline;
+    position: absolute;
+    margin-top: 100px;
 }
 
-#sans{
-    margin: auto;
-    size: 3em;
-    position: relative;
-}
 
 #event-header{
     padding: 25px;

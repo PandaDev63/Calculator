@@ -27,6 +27,7 @@ function updateEventTimer(){
         }
         if(random_event_id > 0.9){
             calc();
+            window.alert(`sans`)
             random_event_id = Math.random();
         }
     }
