@@ -69,8 +69,23 @@ function mogus(){
     calculator.hidden = true;
 }
 
-if(secret_event > 0.9){
+if(secret_event > 0.9 && secret_event < 0.98){
     window.alert(`Ligma...`);
+}
+if(secret_event > 0.98){
+    window.alert(`Hello`);
+    window.alert(`You Are Very Lucky`);
+    window.alert(`This Is A Rare Event`);
+    window.alert(`I Just Wanna Say`);
+    window.alert(`If You Find Any Bugs...`);
+    window.alert(`You Can Yap About It To The Dev`);
+    window.alert(`Not Me Though`);
+    window.alert(`sans Is The Dev Now`);
+    window.alert(`This Site Will Explode In...`);
+    window.alert(`3`);
+    window.alert(`2`);
+    window.alert(`1`);
+    window.location.replace("https://www.google.com/");
 }
 
 function appendToDisplay(input){
