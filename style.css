@@ -9,7 +9,7 @@ body{
 }
 
 #calculator{
-    margin-top: 225px;
+    margin-top: 25px;
     font-family: arial, sans-serif;
     background-color: hsl(0, 0%, 20%);
     border-radius: 25px;
@@ -61,6 +61,7 @@ body{
     color: white;
     align-self:baseline;
     position: absolute;
+    margin-bottom: 25px;
 }
 
 button{
