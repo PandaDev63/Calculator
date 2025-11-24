@@ -4,7 +4,9 @@ const goood = document.getElementById("goood");
 const sound = document.getElementById("inu-sound");
 const sound1 = document.getElementById("sans-sound");
 const event_header = document.getElementById("event-header");
+const techno = document.getElementById("techno");
 
+let divided_by_zero_count = 0;
 let secret_event = Math.random();
 let random_event_id = Math.random();
 let event_seconds = 60;
@@ -25,14 +27,36 @@ function updateEventTimer(){
             sans();
             random_event_id = Math.random();
         }
-        if(random_event_id > 0.9){
+        if(random_event_id > 0.9 && random_event_id < 0.969){
             calc();
-            window.alert(`sans`)
+            window.alert(`sans`);
+            random_event_id = Math.random();
+        }
+        if(random_event_id > 0.969){
+            technoblade();
             random_event_id = Math.random();
         }
     }
 }
 
+function technoblade(){
+    current_event = `techno`;
+    document.title = "Technoblade Is Invading";
+    sound1.loop = false;
+    sound1.pause();
+    document.getElementById("sans").hidden = true;
+    document.getElementById("sans1").hidden = true;
+    document.getElementById("sans2").hidden = true;
+    document.getElementById("sussy").hidden = true;
+    goood.hidden = false;
+    goood.textContent = `GET GOOD`
+    calculator.hidden = true;
+    techno.hidden = false;
+    document.getElementById("techno1").hidden = false;
+    document.getElementById("techno2").hidden = false;
+    document.getElementById("techno3").hidden = false;
+    document.getElementById("techno4").hidden = false;
+}
 function calc(){
     current_event = `calc`;
     document.title = "Calculator";
@@ -43,6 +67,11 @@ function calc(){
     document.getElementById("sans2").hidden = true;
     document.getElementById("sussy").hidden = true;
     goood.hidden = true;
+    techno.hidden = true;
+    document.getElementById("techno1").hidden = true;
+    document.getElementById("techno2").hidden = true;
+    document.getElementById("techno3").hidden = true;
+    document.getElementById("techno4").hidden = true;
     calculator.hidden = false;
 }
 function sans(){
@@ -55,6 +84,12 @@ function sans(){
     document.getElementById("sans1").hidden = false;
     document.getElementById("sans2").hidden = false;
     goood.hidden = false;
+    techno.hidden = true;
+    document.getElementById("techno1").hidden = true;
+    document.getElementById("techno2").hidden = true;
+    document.getElementById("techno3").hidden = true;
+    document.getElementById("techno4").hidden = true;
+    goood.textContent = `SKILL ISSUE`
     calculator.hidden = true;
 }
 function mogus(){
@@ -67,6 +102,11 @@ function mogus(){
     document.getElementById("sans2").hidden = true;
     document.getElementById("sussy").hidden = false;
     goood.hidden = true;
+    document.getElementById("techno1").hidden = true;
+    document.getElementById("techno2").hidden = true;
+    document.getElementById("techno3").hidden = true;
+    document.getElementById("techno4").hidden = true;
+    techno.hidden = true;
     calculator.hidden = true;
 }
 
@@ -98,6 +138,11 @@ function clearDisplay(){
 }
 
 function calculate(){
+    if(display.value.contains("/0")){
+        window.alert(`a mysterious voice whispers`);
+        window.alert(`are you`);
+        window.alert(`STUPID!?`);
+    }
     if(display.value == "Infinity69"){
         window.alert("'SUS, U R,' Yoda said mysteriously...");
     }
