@@ -3,6 +3,7 @@ const calculator = document.getElementById("calculator");
 const goood = document.getElementById("goood");
 const sound = document.getElementById("inu-sound");
 const sound1 = document.getElementById("sans-sound");
+const sound2 = document.getElementById("techno-sound");
 const event_header = document.getElementById("event-header");
 const techno = document.getElementById("techno");
 
@@ -44,6 +45,8 @@ function technoblade(){
     document.title = "Technoblade Is Invading";
     sound1.loop = false;
     sound1.pause();
+    sound2.loop = true;
+    sound2.play();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
@@ -62,6 +65,8 @@ function calc(){
     document.title = "Calculator";
     sound1.loop = false;
     sound1.pause();
+    sound2.loop = false;
+    sound2.pause();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
@@ -80,6 +85,8 @@ function sans(){
     document.title = "Sans Is Invading.";
     sound1.play();
     sound1.loop = true;
+    sound2.loop = false;
+    sound2.pause();
     document.getElementById("sans").hidden = false;
     document.getElementById("sans1").hidden = false;
     document.getElementById("sans2").hidden = false;
@@ -97,6 +104,8 @@ function mogus(){
     document.title = "The Among Us Are Invading.";
     sound1.loop = false;
     sound1.pause();
+    sound2.loop = false;
+    sound2.pause();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
