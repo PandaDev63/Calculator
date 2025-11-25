@@ -52,7 +52,7 @@ function technoblade(){
     document.getElementById("sans2").hidden = true;
     document.getElementById("sussy").hidden = true;
     goood.hidden = false;
-    goood.textContent = `GET GOOD`
+    goood.innerHTML = `GET GOOD`
     calculator.hidden = true;
     techno.hidden = false;
     document.getElementById("techno1").hidden = false;
@@ -96,7 +96,7 @@ function sans(){
     document.getElementById("techno2").hidden = true;
     document.getElementById("techno3").hidden = true;
     document.getElementById("techno4").hidden = true;
-    goood.textContent = `SKILL ISSUE`
+    goood.innerHTML = `SKILL ISSUE`
     calculator.hidden = true;
 }
 function mogus(){
@@ -147,11 +147,6 @@ function clearDisplay(){
 }
 
 function calculate(){
-    if(display.value.contains("/0")){
-        window.alert(`a mysterious voice whispers`);
-        window.alert(`are you`);
-        window.alert(`STUPID!?`);
-    }
     if(display.value == "Infinity69"){
         window.alert("'SUS, U R,' Yoda said mysteriously...");
     }
