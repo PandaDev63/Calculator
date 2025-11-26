@@ -3,6 +3,7 @@ const calculator = document.getElementById("calculator");
 const goood = document.getElementById("goood");
 const sound = document.getElementById("inu-sound");
 const sound1 = document.getElementById("sans-sound");
+const the_sound = document.getElementById("the-sound");
 const sound2 = document.getElementById("techno-sound");
 const event_header = document.getElementById("event-header");
 const techno = document.getElementById("techno");
@@ -12,6 +13,7 @@ let secret_event = Math.random();
 let random_event_id = Math.random();
 let event_seconds = 60;
 let current_event = `calc`;
+let calc_random = Math.random();
 
 setInterval(updateEventTimer, 1000);
 
@@ -147,6 +149,10 @@ function clearDisplay(){
 }
 
 function calculate(){
+    if(calc_random > 0.9){
+        the_sound.play();
+    }
+    calc_random = Math.random();
     if(display.value == "Infinity69"){
         window.alert("'SUS, U R,' Yoda said mysteriously...");
     }
