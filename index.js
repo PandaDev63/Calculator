@@ -1,10 +1,10 @@
 const display = document.getElementById("display");
 const calculator = document.getElementById("calculator");
 const goood = document.getElementById("goood");
-const sound = document.getElementById("inu-sound");
-const sound1 = document.getElementById("sans-sound");
+const inu_sound = document.getElementById("inu-sound");
+const sans_sound = document.getElementById("sans-sound");
 const the_sound = document.getElementById("the-sound");
-const sound2 = document.getElementById("techno-sound");
+const techno_sound = document.getElementById("techno-sound");
 const event_header = document.getElementById("event-header");
 const techno = document.getElementById("techno");
 
@@ -14,6 +14,9 @@ let random_event_id = Math.random();
 let event_seconds = 60;
 let current_event = `calc`;
 let calc_random = Math.random();
+
+techno_sound.loop = true;
+sans_sound.loop = true;
 
 setInterval(updateEventTimer, 1000);
 
@@ -45,10 +48,8 @@ function updateEventTimer(){
 function technoblade(){
     current_event = `techno`;
     document.title = "Technoblade Is Invading";
-    sound1.loop = false;
-    sound1.pause();
-    sound2.loop = true;
-    sound2.play();
+    sans_sound.pause();
+    techno_sound.play();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
@@ -65,10 +66,8 @@ function technoblade(){
 function calc(){
     current_event = `calc`;
     document.title = "Calculator";
-    sound1.loop = false;
-    sound1.pause();
-    sound2.loop = false;
-    sound2.pause();
+    sans_sound.pause();
+    techno_sound.pause();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
@@ -85,10 +84,8 @@ function sans(){
     current_event = `sans`;
     document.getElementById("sussy").hidden = true;
     document.title = "Sans Is Invading.";
-    sound1.play();
-    sound1.loop = true;
-    sound2.loop = false;
-    sound2.pause();
+    sans_sound.play();
+    techno_sound.pause();
     document.getElementById("sans").hidden = false;
     document.getElementById("sans1").hidden = false;
     document.getElementById("sans2").hidden = false;
@@ -104,10 +101,8 @@ function sans(){
 function mogus(){
     current_event = `mogus`;
     document.title = "The Among Us Are Invading.";
-    sound1.loop = false;
-    sound1.pause();
-    sound2.loop = false;
-    sound2.pause();
+    sans_sound.pause();
+    techno_sound.pause();
     document.getElementById("sans").hidden = true;
     document.getElementById("sans1").hidden = true;
     document.getElementById("sans2").hidden = true;
@@ -177,7 +172,7 @@ function calculate(){
     if(display.value == "inumaki"){
         window.alert("YOUR JORDANS ARE FAKE!!!");
         display.value = "INUMAKI";
-        sound.play();
+        inu_sound.play();
     }
     if(display.value == "virus"){
         for (let i = 0; i < 14; i++){
