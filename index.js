@@ -7,6 +7,7 @@ const the_sound = document.getElementById("the-sound");
 const techno_sound = document.getElementById("techno-sound");
 const event_header = document.getElementById("event-header");
 const techno = document.getElementById("techno");
+const fah = document.getElementById("fah");
 
 let divided_by_zero_count = 0;
 let secret_event = Math.random();
@@ -144,6 +145,9 @@ function clearDisplay(){
 }
 
 function calculate(){
+    if(display.value == "67"){
+        fah.play();
+    }
     if(calc_random > 0.9){
         the_sound.play();
     }
